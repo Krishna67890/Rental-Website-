@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Rental Webpage</title>
+    <link rel="shortcut icon" href="p.jpg" type="image/x-icon">
+</head>
+<style>
+    #Nav {
+        width: 100%;
+        height: 160px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .nav1 {
+        width: 100%;
+        height: 50%;
+        background-color: white;
+        border-bottom: 0.5px solid rgba(117, 111, 111, 0.479);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .nav2 {
+        width: 100%;
+        height: 50%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .png11 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .png11 .png {
+        width: 25px;
+        height: 25px;
+        color: black;
+    }
+
+    .png11 h3 {
+        font-size: 12px;
+        color: rgb(56, 56, 56);
+        font-weight: 300;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+        font-weight: 300;
+        color: red;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .search input {
+        width: 250px;
+        padding: 10px;
+        font-size: border-box;
+        border-radius: 30px;
+        padding-left: 20px;
+        border: 1px solid rgba(125, 122, 122, 0.416);
+        font-size: 15px;
+        color: black;
+        outline: none;
+    }
+
+    .search button {
+        padding: 10px;
+        background-color: red;
+        color: white;
+        font-size: 16px;
+        border-radius: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        border: none;
+        transition: all 0.2s;
+        cursor: pointer;
+
+    }
+
+    .search button:hover {
+        border: 2px solid red;
+        background: transparent;
+        color: red;
+    }
+
+    .search .png {
+        width: 20px;
+        height: 20px;
+        color: white;
+    }
+
+    .search button:hover .png {
+        color: red;
+    }
+
+
+
+
+
+
+    /* .ham {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    } */
+
+    #btn1 {
+        border: none;
+        outline: none;
+        background-color: white;
+        font-size: 16px;
+        font-weight: 300;
+        cursor: pointer;
+        border-radius: 30px;
+        padding: 10px 20px 10px 20px;
+        box-sizing: border-box;
+        transition: all 0.1s;
+    }
+
+    #btn1:hover {
+        background-color: rgba(232, 230, 230, 0.844);
+    }
+
+    #btn2 {
+        border: 1px solid rgba(97, 93, 0.844);
+        outline: none;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        border-radius: 30px;
+        padding: 10px 20px 10px 20px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: all 0.1s;
+    }
+
+    #png1 {
+        width: 18px;
+        height: 18px;
+        fill: rgba(92, 89, 89, 0.651);
+    }
+
+    #png2 {
+        width: 25px;
+        height: 25px;
+        fill: rgba(92, 89, 89, 0.651);
+    }
+
+    #btn2:hover {
+        box-shadow: 2px 2px 10px black;
+    }
+
+    /* .hamburger {
+        position: absolute;
+        width: 220px;
+        height: 230px;
+        background-color: white;
+        right: 3%;
+        top: 45%;
+        box-shadow: 2px 2px 10px rgb(80, 78, 78);
+        border-radius: 30px;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        box-sizing: border-box;
+    } */
+/* 
+    .ham1 {
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-weight: 300;
+        color: black;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 30px;
+    } */
+
+    /* .ham1:hover {
+        background-color: rgba(232, 230, 230, 0.844);
+    } */
+
+    @media (max-width: 900px) {
+        #btn1 {
+            display: none;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .logo h1 {
+            display: none;
+        }
+
+        .Nav1 {
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .nav2 {
+            overflow-y: hidden;
+            overflow-x: scroll;
+            justify-content: start;
+            padding: 10px;
+        }
+
+        .svg11 {
+            flex-shrink: 0;
+            scrollbar-width: none;
+        }
+
+        .search input {
+            width: 180px;
+            font-size: 15px;
+        }
+
+        .search button span {
+            display: none;
+        }
+
+        .search {
+            gap: 20px;
+        }
+    }
+
+    @media (min-width: 500px) {
+        #btn2 {
+            border: none;
+            padding: 0;
+        }
+
+        #png2 {
+            display: none;
+        }
+
+        #png1 {
+            width: 25px;
+            height: 25px;
+            fill: black;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #Nav {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+
+
+
+    #home {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        background-color: white;
+        margin-top: 180px;
+    }
+
+
+ 
+    .card {
+        width: 300px;
+        height: 450px;
+        max-width: 90%;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .card .images {
+        width: 100%;
+        height: 65%;
+        overflow: scroll;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        border-radius: 6px;
+    }
+
+    .images img {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+    }
+
+    .cardspan1 {
+        font-size: 20px;
+        font-weight: 300;
+        color: rgb(70, 69, 69);
+    } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+main {
+  margin: 20px;
+}
+
+#form-section, #display-section {
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input, form button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3, .card p {
+  margin: 10px 0;
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+footer ul li a:hover {
+  color: #45a049;
+  text-decoration: underline;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  form input, form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #card-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
+
+/* Media Query for Extra Small Screens (like phones) */
+@media (max-width: 480px) {
+  form input, form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  header {
+    padding: 0.5em;
+    font-size: 18px;
+  }
+
+  footer {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .card img {
+    height: 120px; /* Adjust image size for smaller screens */
+  }
+}
+
+
+
+</style>
+
+<body>
+
+
+
+<!-- 
+
+
+    <div id="Nav">
+        <div class="hamburger">
+            <div class="ham1">LOGIN</div>
+            <div class="ham1">SignUp</div>
+            <div class="ham1">List Your Home</div>
+            <div class="ham1">help center</div>
+        </div>
+ -->
+
+
+
+
+
+
+        <div class="nav1">
+            <div class="logo">
+                <img src="p.jpg" alt="" width="50px">
+                <h1>Private property Rental</h1>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="search destination" />
+                <button>
+                    <img src="search-interface-symbol.png" alt="Search Icon" style="width: 20px; height: 20px;">
+                    <span>Search</span>
+                </button>
+
+
+
+
+
+            <!-- </div>
+            <div class="ham">
+                <button id="btn1">List Your Home</button>
+                <button id="btn2" onClick="setvisible(prev=>!perv)">
+                    <img id="png1" src="hamburger.png" alt="Menu" style="width: 20px; height: 20px;">
+                    <img id="png2" src="user.png" alt="Menu" style="width: 20px; height: 20px;">
+                </button>
+            </div>
+        </div>
+ -->
+
+
+
+
+
+
+
+
+<!-- 
+
+        <div class="nav2">
+            <div class="png11">
+                <a href="/trending">
+                    <img src="/images/trending.png" alt="Trending" />
+                    <h3>Trending</h3>
+                </a>
+            </div>
+            <div class="png11">
+                <a href="/houses">
+                    <img src="/images/houses.png" alt="Houses" />
+                    <h3>Houses</h3>
+                </a>
+            </div>
+            <div class="png11">
+                <a href="/rooms">
+                    <img src="/images/rooms.png" alt="Rooms" />
+                    <h3>Rooms</h3>
+                </a>
+            </div>
+            <div class="png11">
+                <a href="/farmhouses">
+                    <img src="/images/farmhouses.png" alt="Farm Houses" />
+                    <h3>Farm Houses</h3>
+                </a>
+            </div>
+            <div class="png11">
+                <a href="/poolhouses">
+                    <img src="/images/poolhouses.png" alt="Pool Houses" />
+                    <h3>Pool Houses</h3>
+                </a>
+            </div>
+            <div class="png11">
+                <a href="/tenthouses">
+                    <img src="/images/tenthouses.png" alt="Tent Houses" />
+                    <h3>Tent Houses</h3>
+                </a>
+            </div>
+            <div class="png11">
+                <a href="/cabins">
+                    <img src="/images/cabins.png" alt="Cabins" />
+                    <h3>Cabins</h3>
+                </a>
+            </div>
+            <div class="png11">
+                <a href="/shops">
+                    <img src="/images/shops.png" alt="Shops" />
+                    <h3>Shops</h3>
+                </a>
+            </div>
+            <div class="png11">
+                <a href="/foresthouses">
+                    <img src="/images/foresthouses.png" alt="Forest Houses" />
+                    <h3>Forest Houses</h3>
+                </a>
+            </div>
+        </div>
+ -->
+
+
+
+
+
+
+
+        <header>
+            <h1>Rent a House or Villa</h1>
+          </header>
+          <main>
+            <section id="form-section">
+              <h2>Add a House or Villa</h2>
+              <form id="rental-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" placeholder="Enter title" required>
+        
+                <label for="description">Description:</label>
+                <input type="text" id="description" placeholder="Enter a description" required>
+        
+                <label for="image1">Image 1 URL:</label>
+                <input type="url" id="image1" placeholder="Enter image 1 URL" required>
+        
+                <label for="image2">Image 2 URL:</label>
+                <input type="url" id="image2" placeholder="Enter image 2 URL" required>
+        
+                <label for="image3">Image 3 URL:</label>
+                <input type="url" id="image3" placeholder="Enter image 3 URL" required>
+        
+                <label for="price">Price:</label>
+                <input type="number" id="price" placeholder="Enter price" required>
+        
+                <label for="place">Place:</label>
+                <input type="text" id="place" placeholder="Enter place" required>
+        
+                <button type="submit">Add</button>
+              </form>
+            </section>
+        
+            <section id="display-section">
+              <h2>Available Rentals</h2>
+              <div id="card-container"></div>
+            </section>
+          </main>
+          <footer>
+            <ul>
+              <li><a href="#form-section">Add Rental</a></li>
+              <li><a href="#display-section">View Rentals</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </footer>
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            let [Visible, setvisible] = usestate(false)
+
+
+
+
+
+    document.getElementById('rental-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const title = document.getElementById('title').value;
+      const description = document.getElementById('description').value;
+      const image1 = document.getElementById('image1').value;
+      const image2 = document.getElementById('image2').value;
+      const image3 = document.getElementById('image3').value;
+      const price = document.getElementById('price').value;
+      const place = document.getElementById('place').value;
+
+      if (!title || !description || !image1 || !image2 || !image3 || !price || !place) {
+        alert('Please fill all fields!');
+        return;
+      }
+
+      addCard(title, description, image1, image2, image3, price, place);
+
+      // Reset form
+      document.getElementById('rental-form').reset();
+    });
+
+    function addCard(title, description, image1, image2, image3, price, place) {
+      const cardContainer = document.getElementById('card-container');
+
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      card.innerHTML = `
+        <h3>${title}</h3>
+        <p>${description}</p>
+        <img src="${image1}" alt="${title} Image 1">
+        <img src="${image2}" alt="${title} Image 2">
+        <img src="${image3}" alt="${title} Image 3">
+        <p>Price: ₹${price}</p>
+        <p>Place: ${place}</p>
+      `;
+
+      cardContainer.appendChild(card);
+    }
+
+        </script>
+
+</body>
+
+</html>
